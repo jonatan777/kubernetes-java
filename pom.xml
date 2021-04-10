@@ -23,6 +23,9 @@
       <!--  <maven-enforcer-plugin.version>3.0.0-atlassian-m01</maven-enforcer-plugin.version> -->
     </properties>
 
+
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -135,7 +138,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <dotGitDirectory>${project.basedir}/home/jonatan/Downloads/java-kubernetes/.git</dotGitDirectory>
+                    <dotGitDirectory>${project.basedir}/home/jonatan/Downloads/kubernetes-java/.git</dotGitDirectory>
                     <dateFormat>yyyy-MM-dd'T'HH:mm:ssZ</dateFormat>
                     <dateFormatTimeZone>${user.timezone}</dateFormatTimeZone>
                     <generateGitPropertiesFile>true</generateGitPropertiesFile>
@@ -148,6 +151,14 @@
                         <includeOnlyProperty>git.build.version</includeOnlyProperty>
                         <includeOnlyProperty>git.branch</includeOnlyProperty>
                     </includeOnlyProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
                 </configuration>
             </plugin>
         </plugins>
